@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AFL-6I-lc9">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Set-->
+        <scene sceneID="Mxf-Mr-qUd">
+            <objects>
+                <viewController id="AFL-6I-lc9" customClass="SetViewController" customModule="Animated_Set" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Pn-Xh-wSJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="REV-kJ-khH">
+                                <rect key="frame" x="16" y="504.5" width="288" height="47.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6P-n2-HxJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="94.5" height="47.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Y6P-n2-HxJ" secondAttribute="height" multiplier="2:1" id="7D8-iE-UJb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Deal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dealCards:" destination="AFL-6I-lc9" eventType="touchUpInside" id="yeA-kN-stN"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="CvT-YF-IAX">
+                                        <rect key="frame" x="96.5" y="0.0" width="95" height="47.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYE-Az-ssC">
+                                                <rect key="frame" x="30.5" y="0.0" width="34.5" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Os3-Yc-jpj">
+                                                <rect key="frame" x="10" y="29" width="75" height="18.5"/>
+                                                <state key="normal" title="New Game">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="NewGame:" destination="AFL-6I-lc9" eventType="touchUpInside" id="0SC-9v-XGU"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Match" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UxW-bB-LRb">
+                                        <rect key="frame" x="193.5" y="0.0" width="94.5" height="47.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="UxW-bB-LRb" secondAttribute="height" multiplier="2:1" id="H2S-2h-OKp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <view opaque="NO" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Wuo-73-Czu" customClass="TableView" customModule="Animated_Set">
+                                <rect key="frame" x="16" y="36" width="288" height="452.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="REV-kJ-khH" firstAttribute="centerX" secondItem="xuI-df-udB" secondAttribute="centerX" id="Dye-0R-cPf"/>
+                            <constraint firstItem="xuI-df-udB" firstAttribute="trailing" secondItem="Wuo-73-Czu" secondAttribute="trailing" constant="16" id="FYf-ST-bB5"/>
+                            <constraint firstItem="Wuo-73-Czu" firstAttribute="top" secondItem="xuI-df-udB" secondAttribute="top" constant="16" id="OnC-Zk-mCH"/>
+                            <constraint firstItem="REV-kJ-khH" firstAttribute="top" secondItem="Wuo-73-Czu" secondAttribute="bottom" constant="16" id="Vmm-zL-lh7"/>
+                            <constraint firstItem="xuI-df-udB" firstAttribute="leading" relation="lessThanOrEqual" secondItem="REV-kJ-khH" secondAttribute="leading" constant="-16" id="XXO-e5-j5F"/>
+                            <constraint firstItem="xuI-df-udB" firstAttribute="bottom" secondItem="REV-kJ-khH" secondAttribute="bottom" constant="16" id="l5A-sX-K0R"/>
+                            <constraint firstItem="Wuo-73-Czu" firstAttribute="leading" secondItem="xuI-df-udB" secondAttribute="leading" constant="16" id="qNe-7M-Z1y"/>
+                            <constraint firstItem="REV-kJ-khH" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="xuI-df-udB" secondAttribute="trailing" constant="-16" id="xhV-Ds-s60"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xuI-df-udB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Set" id="MZr-HO-q9G"/>
+                    <connections>
+                        <outlet property="Score" destination="kYE-Az-ssC" id="a9u-vV-wGd"/>
+                        <outlet property="dealDeck" destination="Y6P-n2-HxJ" id="nPU-Uv-hB7"/>
+                        <outlet property="matchedDeck" destination="UxW-bB-LRb" id="v9W-om-yrk"/>
+                        <outlet property="tableView" destination="Wuo-73-Czu" id="GqT-Wf-5im"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mfY-Cp-Mlr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2283.75" y="3022.1830985915494"/>
+        </scene>
+    </scenes>
+</document>
