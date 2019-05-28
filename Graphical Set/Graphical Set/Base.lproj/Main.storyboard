@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Graphical_Set" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Rb-40-GAH">
+                                <rect key="frame" x="150" y="617" width="75" height="30"/>
+                                <state key="normal" title="New Game"/>
+                                <connections>
+                                    <action selector="NewGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qK9-fJ-ndM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ztk-Aa-GC3">
+                                <rect key="frame" x="155.5" y="588" width="64" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cuf-nN-10u">
+                                <rect key="frame" x="123" y="550" width="128" height="30"/>
+                                <state key="normal" title="Deal 3 More Cards"/>
+                                <connections>
+                                    <action selector="dealCards:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VCc-q9-cld"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBq-cW-E39">
+                                <rect key="frame" x="129" y="20" width="117" height="30"/>
+                                <state key="normal" title="Two Player Mode"/>
+                                <connections>
+                                    <action selector="touchModeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XS1-1E-uzg"/>
+                                </connections>
+                            </button>
+                            <view opaque="NO" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="yAH-fN-eqx" customClass="TableView" customModule="Graphical_Set" customModuleProvider="target">
+                                <rect key="frame" x="16" y="58" width="343" height="484"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9Rb-40-GAH" secondAttribute="bottom" constant="20" id="2PT-Rn-vE4"/>
+                            <constraint firstItem="WBq-cW-E39" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="AEh-SO-hDW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yAH-fN-eqx" secondAttribute="trailing" constant="16" id="EU5-ZK-lxD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ztk-Aa-GC3" secondAttribute="trailing" id="Ewj-au-ITf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="WBq-cW-E39" secondAttribute="trailing" id="Hxn-7L-jxI"/>
+                            <constraint firstItem="Cuf-nN-10u" firstAttribute="top" secondItem="yAH-fN-eqx" secondAttribute="bottom" constant="8" id="LcL-IV-DSe"/>
+                            <constraint firstItem="9Rb-40-GAH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Qb7-8I-Zh0"/>
+                            <constraint firstItem="WBq-cW-E39" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="R9w-HR-Bqn"/>
+                            <constraint firstItem="Ztk-Aa-GC3" firstAttribute="top" secondItem="Cuf-nN-10u" secondAttribute="bottom" constant="8" id="Zr2-ZA-fai"/>
+                            <constraint firstItem="yAH-fN-eqx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="aCN-BG-NKM"/>
+                            <constraint firstItem="yAH-fN-eqx" firstAttribute="top" secondItem="WBq-cW-E39" secondAttribute="bottom" constant="8" id="diA-nb-lGy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cuf-nN-10u" secondAttribute="trailing" constant="124" id="ecv-Wk-DcX"/>
+                            <constraint firstItem="Cuf-nN-10u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="123" id="ekq-cp-chG"/>
+                            <constraint firstItem="WBq-cW-E39" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hgl-jx-KRW"/>
+                            <constraint firstItem="Ztk-Aa-GC3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hqW-ce-pXp"/>
+                            <constraint firstItem="Ztk-Aa-GC3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="r93-p9-Xge"/>
+                            <constraint firstItem="9Rb-40-GAH" firstAttribute="top" secondItem="Ztk-Aa-GC3" secondAttribute="bottom" constant="8" id="ybD-mU-wdO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="Score" destination="Ztk-Aa-GC3" id="ImU-Oe-0iF"/>
+                        <outlet property="TableView" destination="yAH-fN-eqx" id="sHX-k2-O9R"/>
+                        <outlet property="modeLabel" destination="WBq-cW-E39" id="sof-JU-3Hs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="131.78410794602701"/>
+        </scene>
+    </scenes>
+</document>
